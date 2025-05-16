@@ -1,0 +1,406 @@
+
+
+.contact_us_content{
+    width: 98vw;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 0px;
+}
+.contact_us_content h1{
+    font-size:64px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-align: center;
+}
+.contact_us_content p{
+    font-size:16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-align: center;
+}
+.contact_us_content .contact_us_prop{
+    width: 100%;
+    height:667px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: var( --box-shadow);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.physical{
+   background: url("../../../public/assets/images/Frame1.png");
+   width: 491px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: flex-start;
+   padding: 40px;
+   background-size:cover;
+   border-radius: 10px;
+   background-position: center;
+}
+
+.info_head{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.contact_us_content .physical h2{
+    font-size:28px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color:#fff;
+    text-align: left;
+}
+.contact_us_content .physical p{
+    font-size:18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color:#fff;
+    text-align: left;
+}
+.physical ul.physical_info{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.physical ul.physical_info li{
+    display: flex;
+    align-items: center;
+    gap:25px;
+    cursor: pointer;
+}
+.physical ul.physical_info li img{
+    width: 18px;
+    height: 18px;
+}
+.physical ul.physical_info li p{
+    font-size:16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color:#fff;
+    max-width: 288px;
+    text-align: left;
+}
+
+
+
+.physical ul.sos{
+    display: flex;
+    gap:24px;
+}
+
+
+.form{
+    width: calc(100% - 491px);
+    height: 100%;
+}
+.form form{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.form .row{
+    width: 100%;
+    display: flex;
+    gap: 50px;
+}
+
+.form label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid var(--grade-color-3);
+    padding-bottom: 10px;
+    font-size:16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color:var(--grade-color-3);
+}
+
+.form label input{
+    width: 100%;
+    font-size:16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color:var(--primary-color);
+    max-width: 288px;
+    text-align: left;
+}
+
+.form button{
+    width:214px;
+    height: 54px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size:16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    align-self: flex-end;
+}
+
+
+.FAQS{
+    width: 98vw;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 80px 0px ;
+    align-items: center;
+}
+
+.FAQS h1{
+    font-size:64px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.FAQS ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.FAQS ul li{
+    display: flex;
+    gap: 25px;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    width: calc(50% - 30px);
+    transition: .5s ease-in-out;
+    height: 60px;
+    border-radius: 5px;
+    overflow: hidden;
+    align-items: flex-start;
+    justify-content: right;
+}
+
+.FAQS ul li img{
+    cursor: pointer;
+    width: 17px;
+    height:17px;
+
+}
+
+.FAQS ul li div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    height: fit-content;
+}
+.FAQS ul li div h2{
+    font-size:18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-align: left;
+}
+.FAQS ul li div p{
+    font-size:14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-align: left;
+    line-height: 150%;
+    width: 100%;
+    padding-left: 5px;
+    overflow-y: auto;
+    max-height: 80px;
+    /* display: none; */
+}
+.FAQS ul li.active{
+    height: calc( 120px + 60px);
+}
+
+
+@media screen and (max-width: 1100px) {
+    .contact_us_content .contact_us_prop{
+        width: 100%;
+        height:fit-content;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: var( --box-shadow);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        margin-top: 30px;
+    }
+    .physical{
+        background: url("../../../public/assets/images/Frame1.png");
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 40px;
+        gap: 40px;
+        background-size:cover;
+        border-radius: 10px;
+        background-position: center;
+     }
+     
+.contact_us_content .physical h2{
+    font-size:28px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color:#fff;
+    text-align: left;
+}
+.contact_us_content .physical p{
+    font-size:18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color:#fff;
+    /* text-align: center; */
+}
+.physical ul.physical_info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+     .form{
+        width:100%;
+        height: 100%;
+    }
+
+    .FAQS{
+    }
+    
+    .FAQS ul{
+        align-items: center;
+        width: 70%;
+        min-width: 500px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 50px;
+    }
+    
+    .FAQS ul li{
+        display: flex;
+        gap: 25px;
+        box-shadow: var(--box-shadow);
+        padding: 20px;
+        width: 100%;
+        transition: .5s ease-in-out;
+        height: 60px;
+        border-radius: 5px;
+        overflow: hidden;
+        align-items: flex-start;
+        justify-content: right;
+    }
+}
+
+
+
+@media screen and (max-width: 600px){
+    .contact_us_content h1{
+        font-size:40px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: var(--text-color);
+        text-align: center;
+    }
+    .contact_us_content p{
+        font-size:15px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: var(--text-color);
+        width: 70%;
+        text-align: center;
+    }
+    .physical{
+        background: url("../../../public/assets/images/Frame1.png");
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 10px;
+        gap: 40px;
+        background-size:cover;
+        border-radius: 10px;
+        background-position: center;
+     }
+.contact_us_content{
+    width: 98vw;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0px;
+}
+
+.form form{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.form .row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.FAQS h1{
+    font-size:40px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.FAQS ul{
+    width: 100%;
+    min-width: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+.FAQS ul li{
+    height: 80px;
+}
+.FAQS{
+    width: 98vw;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 0px ;
+    align-items: center;
+}
+
+}

@@ -1,0 +1,249 @@
+
+
+
+nav{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding: 20px 0px ;
+    width: 98vw;
+    align-items: flex-start;
+    max-width: 1300px;
+}
+
+nav h1{
+    gap: 0;
+    font-size:32px;
+    font-family: "Kodchasan",sans-serif;
+    font-weight: 600;
+    /* color: var(--primary-color); */
+    color: var(--primary-color);
+    display: flex;
+}
+
+nav h1 strong{
+    text-transform: none;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+nav .user_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+}
+nav .user_info div{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+nav .user_info div h1{
+    gap: 0;
+    font-size:40px;
+    font-family: "Kodchasan",sans-serif;
+    font-weight: 500;
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+    gap: 10px;
+    align-items: first baseline;
+}
+nav .user_info div h1 strong{
+    gap: 0;
+    font-size:20px;
+    font-family: "Kodchasan",sans-serif;
+    font-weight: 500;
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+}
+
+nav .user_info div h2{
+    gap: 0;
+    font-size:32px;
+    font-family: "Kodchasan",sans-serif;
+    font-weight: 500;
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+}
+
+
+nav .user_info  button{
+    width: fit-content;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 0px 20px;
+    font-size:16px;
+    font-family: "Kodchasan",sans-serif;
+    font-weight: 500;
+    /* color: var(--primary-color); */
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+nav ul{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    overflow: auto;
+    padding-bottom: 9px;
+}
+
+nav ul li{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border: 1px solid var(--grade-color-3);
+    font-size:16px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 500;
+    border-radius: 5px;
+    height:40px;
+    min-width: 200px;
+    text-transform: capitalize;
+    color: var(--grade-color-3);
+}
+
+nav ul li:nth-child(1){
+    padding: 0px;
+    width: 40px;
+    min-width: 0px;
+}
+nav ul li a:nth-child(1){
+    padding: 0px ;
+}
+nav ul li a{
+    width: 100%;
+    padding: 0px 30px;
+    color: var(--grade-color-3);
+     display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text-color);
+    padding: 20px 0px;
+}
+
+footer section{
+    width: 98%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer section div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+}
+
+footer div h1{
+    gap: 0;
+    font-size:32px;
+    font-family: "Kodchasan",sans-serif;
+    font-weight: 600;
+    /* color: var(--primary-color); */
+    color: var(--primary-color);
+    display: flex;
+}
+footer div h1 strong{
+    color: #fff;
+    font-weight: 600;
+    text-transform: none;
+}
+footer div ul{
+    display: flex;
+}
+
+footer div ul{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+   }
+
+   footer div ul li{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+   }
+
+   footer hr{
+    width:100%;
+    height: 2px;
+    background-color:var(--foreground);
+   }
+
+   footer p{
+    color: var(--foreground);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+   }
+
+
+
+   @media screen and (max-width : 700px) {
+    nav .user_info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        gap: 20px;
+    }
+    nav ul li{
+        width: fit-content;
+        padding: 0px 30px;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        border: 1px solid var(--grade-color-3);
+        font-size:16px;
+        /* font-family: "Kodchasan",sans-serif; */
+        font-weight: 500;
+        border-radius: 5px;
+        height:40px;
+        min-width: 150px;
+        text-transform: capitalize;
+        color: var(--grade-color-3);
+    }
+    
+    footer section div{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    footer div ul li{
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: capitalize;
+        cursor: pointer;
+       }
+    footer p{
+        color: var(--foreground);
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: capitalize;
+       }
+   }

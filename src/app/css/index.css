@@ -1,0 +1,470 @@
+
+
+.hero{
+    width: 98vw;
+    max-width: 1300px;
+    display: flex;
+    padding: 80px 10px;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.hero h1{
+    font-size:64px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.hero p{
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--text-color);
+}
+
+.hero div{
+    display: flex;
+    gap: 20px;
+}
+
+.hero div a{
+    width: 200px;
+    height: 55px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size:16px;
+    font-weight: 400px;
+    text-transform: capitalize;
+    border: 1px solid var( --primary-color);
+    transition: .5s ease-in-out;
+}
+
+.hero div a:nth-child(1){
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.hero div a:nth-child(2){
+    color: var(--primary-color);
+}
+
+.hero div a:hover{
+    box-shadow: var(--box-shadow);
+}
+
+
+
+
+
+
+
+
+
+
+
+.location .map,
+.intro_video{
+width: 98vw;
+max-width: 1300px;
+height: fit-content;
+border-radius: 20px;
+overflow: hidden;
+}
+
+.intro_video video{
+    width:100%;
+    height: 630px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+.reviews,
+.location,
+.HowItWorks{
+    width: 98vw;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0px;
+}
+
+.reviews h1,
+.location h1,
+.HowItWorks h1{
+    font-size:32px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.HowItWorks ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+
+  .HowItWorks ul li {
+    flex: 1 1 calc(25% - 40px); /* 4 items per row with gap */
+    max-width: calc(25% - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 285;
+    height: 200px;
+  }
+
+  .HowItWorks ul li img{
+    width: 60px;
+    height: 60px;
+  }
+
+  .HowItWorks ul li h2{
+    font-size:20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+  .HowItWorks ul li p{
+    font-size:15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+
+
+  .location{
+    padding-top: 0;
+  }
+
+
+  .location .map iframe{
+    width: 100%;
+    height: 600px;
+  }
+
+
+  .select_location{
+    width: 480px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--grade-color-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-right: 5px;
+    padding-left: 20px;
+  }
+
+  .select_location img{
+    width: 24px;
+    height: 24px;
+  }
+
+  .select_location select{
+    color: var(--grade-color-3);
+    font-size: 16px;
+    width: 100%;
+    text-transform: capitalize;
+  }
+
+
+  .reviews{
+    padding-top: 0;
+  }
+
+
+  .reviews ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 900px;
+  }
+
+  .reviews ul li{
+    display: none;
+  }
+
+  .reviews ul li.active{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .reviews ul li img.profile{
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .reviews .row{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-content: center;
+  }
+
+  .reviews .information{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width:600px;
+  }
+
+  .reviews .information .stars img{
+   width: 24px;
+   height: 24px;
+  }
+
+  .reviews .information p{
+    font-size:16px;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: capitalize;
+    color: var(--text-color);
+  }
+  .reviews .information h2{
+    font-size:20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+  }
+  .reviews .information span{
+    width:20px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    background-color: var(--foreground);
+  }
+
+  .reviews .information span.active{
+    width:50px;
+    background-color: var(--primary-color);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 900px) {
+
+
+    .intro_video video{
+        width:100%;
+        height: 350px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    
+.HowItWorks ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+
+
+
+    .HowItWorks ul li {
+        flex: 1 1 100%; /* or 50% for 2-per-row on smaller screens */
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        width: 285;
+        height: 200px;
+      }
+
+
+
+    
+  .location .map iframe{
+    width: 100%;
+    height: 400px;
+  }
+
+
+
+    .reviews ul li.active{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+      }
+      .reviews ul li img.profile{
+        width: 100%;
+        height: calc(35vw + 200px);
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: center;
+      }
+    
+      .reviews .row{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-content: center;
+      }
+    
+      .reviews .information{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        max-width:600px;
+      }
+    
+  }
+
+
+
+  @media screen and (max-width: 600px) {
+    
+
+
+    .reviews h1,
+    .location h1,
+    .HowItWorks h1{
+        font-size:25px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: var(--text-color);
+        text-align: center;
+    }
+
+    
+    .intro_video{
+        transform: rotate(90deg);
+        height: 98vw;
+        display: flex;
+        align-items: center;
+    }
+    .intro_video video{
+        width:100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+  .location .map iframe{
+    width: 100%;
+    height: 300px;
+  }
+
+
+    .select_location{
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid var(--grade-color-3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-right: 5px;
+        padding-left: 20px;
+      }
+  }
+
+
+  @media screen and (max-width: 420px) {
+    .hero{
+        width: 98vw;
+        max-width: 1300px;
+        display: flex;
+        padding: 30px 10px;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero h1{
+        font-size:44px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: var(--text-color);
+        text-align: center;
+    }
+    
+    .hero p{
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: var(--text-color);
+        text-align: center;
+    }
+    
+    .hero div{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    
+    .hero div a{
+        width: 300px;
+        height: 55px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size:16px;
+        font-weight: 400px;
+        text-transform: capitalize;
+        border: 1px solid var( --primary-color);
+        transition: .5s ease-in-out;
+    }
+        
+    .intro_video video{
+        width:100%;
+        height: 370px;
+        object-fit: cover;
+        /* transform: rotate(90deg); */
+        object-position: center;
+    }
+
+  }

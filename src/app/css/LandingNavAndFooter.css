@@ -1,0 +1,459 @@
+
+
+
+  
+  .landinG_nav{
+    display: flex;
+    width: 98%;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    max-width: 1300px;
+    max-width: 1300px;
+    flex-direction: row;
+    justify-content:space-between;
+    gap: 20px;
+    height: 50px;
+    padding-top: 10px;
+    align-items: center;
+   
+    position: relative;
+   }
+   nav div{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+   }
+
+   .logo{
+    gap: 0;
+    font-size:32px;
+    font-family: "Kodchasan",sans-serif;
+    font-weight: 600;
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+   }
+
+
+   .logo strong{
+    text-transform: none;
+    color: var(--primary-color);
+    font-weight: 600;
+   }
+
+   nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 100%;
+   }
+
+   nav ul a{
+    width: fit-content;
+    padding: 0px 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+   nav ul a li{
+     font-size: 15px;
+     color: var(--text-color);
+     font-weight: 600;
+     text-transform: capitalize;
+   }
+   nav ul a.active{
+    border-bottom: 3px solid var(--primary-color);
+   }
+   nav ul a.active li{
+    color: var(--primary-color);
+   }
+
+   nav a.button{
+   justify-self: left;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 600px;
+    font-size: 15px;
+    border-radius: 10px;
+    height: 40px;
+    background-color: var(--primary-color);
+   }
+   nav a.button strong{
+    font-weight: 500px;
+    font-size: 15px;
+   }
+   nav a.button img{
+    width: 20px;
+    height: 20px;
+   }
+
+   .icon{
+    display: none;
+   }
+
+   
+
+@media screen and (max-width: 1000px) {
+  nav div{
+    display: flex;
+    width: 90px;
+  }
+  nav ul{
+    position: absolute;
+    top: 120%;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--foreground);
+    height: fit-content;
+    border-radius: 0px;
+    height: 0px;
+    gap: 0;
+    overflow: hidden;
+    transition:.3s ease  ;
+  }
+  nav ul.active{
+    height: 80px;
+  }
+
+   nav ul a{
+    width:180px;
+    padding: 0px 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a.button{
+    width: 40px;
+  }
+  nav a.button strong{
+    display: none;
+  }
+
+
+.icon {
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  height: 24px;
+  padding: 16px;
+  width: 24px;
+}
+
+label.icon {
+  position: absolute;
+  z-index: 200;
+  right: 20px;
+  top: 0%;
+      /* background-color: #9FB1BD; */
+}
+
+.icon .menu,
+.icon .menu::before,
+.icon .menu::after {
+  background: #9FB1BD;
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  border-radius: 30px;
+  transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+  width: 25px;
+}
+
+.icon:hover .menu,
+.icon:hover .menu::before,
+.icon:hover .menu::after {
+  background: #47B74B;
+}
+
+.icon .menu {
+  left: 18px;
+  top: 27px;
+}
+
+.icon .menu::before {
+  top: -6px;
+}
+
+.icon .menu::after {
+  top: 6px;
+}
+
+.icon.active .menu {
+  background: transparent;
+}
+
+.icon.active .menu::before {
+  transform: rotate(45deg);
+}
+
+.icon.active .menu::after {
+  transform: rotate(-45deg);
+}
+
+.icon.active .menu::before,
+.icon.active .menu::after {
+  top: 0;
+  transition: top ease .3s, transform ease .3s .3s;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+   .footerContainer{
+      display: flex;
+      width: 100vw;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 80px;
+      background-color: var(--text-color);
+   }
+
+   .footerContainer footer{
+    width: 98%;
+    max-width: 1300px;
+    display: flex;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+   }
+   footer .subscribe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+   }
+
+   footer .subscribe h1{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+   }
+
+   footer .subscribe div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 100px;
+    height:50px;
+    width: 400px;
+   }
+   footer .subscribe div label{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-radius: 25px 0px 00px 25px;
+    padding-left: 20px;
+    gap: 10px;
+    border-left: 1px solid var(--foreground);
+    border-bottom: 1px solid var(--foreground);
+    border-top: 1px solid var(--foreground);
+   }
+
+   footer .subscribe div label img{
+    width:24px;
+    height: 24px;
+   }
+
+   footer .subscribe div label input{
+    background-color: transparent;
+    color: var(--foreground);
+    font-size: 16px;
+    font-weight: 500;
+   }
+
+   footer .subscribe div button{
+    width: 30%;
+    height: 100%;
+    background-color: var(--primary-color);
+    color: var(--foreground);
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    cursor: pointer;
+   }
+
+   footer .other_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+   }
+
+   footer .other_info div.top{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+   }
+
+   footer .other_info div .logo{
+    gap: 0;
+    font-size:32px;
+    font-family: "Kodchasan",sans-serif;
+    font-weight: 600;
+    /* color: var(--primary-color); */
+    color: #fff;
+   }
+
+   footer .other_info div .logo strong{
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: none;
+   }
+
+   footer .other_info div ul{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+   }
+
+   footer .other_info div ul li{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+   }
+
+   footer .other_info hr{
+    width:100%;
+    height: 2px;
+    background-color:var(--foreground);
+   }
+
+   footer .other_info p{
+    color: var(--foreground);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+   }
+
+
+   @media screen and (max-width: 800px) {
+    footer .other_info div.top{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      gap: 50px;
+     }
+
+     .footerContainer footer{
+      width: 98%;
+      max-width: 1300px;
+      display: flex;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+     }
+     
+   footer .subscribe h1{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+   }
+
+   footer .subscribe div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 100px;
+    height:35px;
+    width: 300px;
+   }
+   footer .subscribe div label{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-radius: 25px 0px 00px 25px;
+    padding-left: 20px;
+    gap: 10px;
+    border-left: 1px solid var(--foreground);
+    border-bottom: 1px solid var(--foreground);
+    border-top: 1px solid var(--foreground);
+   }
+
+   footer .subscribe div label img{
+    width:14px;
+    height: 14px;
+   }
+
+   footer .subscribe div label input{
+    background-color: transparent;
+    color: var(--foreground);
+    font-size: 14px;
+    font-weight: 500;
+   }
+
+   footer .subscribe div button{
+    width: 30%;
+    height: 100%;
+    background-color: var(--primary-color);
+    color: var(--foreground);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    cursor: pointer;
+   }
+   footer .other_info div ul li{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+   }
+
+   
+   footer .other_info p{
+    color: var(--foreground);
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+   }
+   }

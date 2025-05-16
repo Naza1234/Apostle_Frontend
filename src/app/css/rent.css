@@ -1,0 +1,241 @@
+main{
+    width: 98%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    /* height: 440px; */
+    margin: 50px 0px;
+}
+
+main .clickable{
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    padding: 20px;
+}
+
+main .clickable p{
+    font-size:25px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 500;
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+    text-align: center;
+}
+
+main .clickable img{
+    width: 80%;
+    height: auto;
+    max-width: 200px;
+}
+
+
+
+section.rentPower{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+    width: 98%;
+    max-width: 700px;
+    box-shadow: var(--box-shadow);
+    margin: 50px 0px;
+}
+section.rentPower h1{
+    font-size:20px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 500;
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+    display: flex;
+    align-items: flex-end;
+}
+
+.form div.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form div.row label{
+    width: fit-content;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border: 2px solid var(--grade-color-3);
+    font-size:16px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 500;
+    border-radius: 5px;
+    height:40px;
+    min-width: 200px;
+    text-transform: capitalize;
+    color: var(--grade-color-3);
+    cursor: pointer;
+}
+
+.form div.row label input{
+    display: none;
+}
+
+.form div.row label:has(input[type="radio"]:checked) {
+    border-color: #007bff;
+    background-color: #e0f0ff;
+    font-weight: bold;
+    color: #007bff;
+  }
+.form label.number{
+    display: flex;
+    flex-direction: column;
+    /* border-bottom: 1.5px solid var(--grade-color-3); */
+    padding: 10px 0px;
+    font-size:15px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 400;
+    color: var(--grade-color-3);
+    /* color: var(--primary-color); */
+    /* color:#fff; */
+    width: 100%;
+    gap: 10px;
+}
+input.number,
+.form label.number input[type="number"]{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding: 5px;
+    font-size:18px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    /* color: var(--primary-color); */
+    color:var(--text-color);
+    background-color: var(--foreground);
+    border-radius: 5px;
+}
+
+section button{
+    font-size:16px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 500;
+    /* color: var(--primary-color); */
+    color:#fff;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+section button.add{
+    width: 40px;
+    height: 40px;
+    /* padding: 10px; */
+    border-radius: 10px;
+    align-self: flex-end;
+}
+section.priv{
+    gap: 0px;
+}
+.play-out{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--grade-color-3);
+    padding: 10px;
+}
+
+section.rentPower .play-out h1{
+    color: #fff;    
+    font-weight: 600;
+    font-size: 20px;
+    min-width: 200px;
+    width: 100%;
+}
+
+.play-out span{
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.play-out-cont{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 10px; */
+}
+
+section.rentPower .play-out-cont h1{
+    color: var(--text-color);    
+    font-weight: 500;
+    font-size: 18px;
+    min-width: 200px;
+    width: 100%;
+    padding: 5px;
+    border-right: 2px solid var(--grade-color-3);
+}
+
+.play-out-cont span{
+    width: 80px;
+    padding: 5px;
+    /* background-color: var(--grade-color-3); */
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: var(--text-color);
+    /* border-right: 2px solid var(--grade-color-3); */
+    /* border-right: 1.5px solid var(--grade-color-3); */
+}
+
+
+@media screen and (max-width : 750px) {
+    main {
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        width: 98%;
+        flex-direction: column;
+        max-width: 1300px;
+        margin: 30px 0;
+        display: flex ;
+    }
+    .form div.row label{
+        width: 100%;
+        padding: 0px 20px;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        border: 2px solid var(--grade-color-3);
+        font-size:16px;
+        /* font-family: "Kodchasan",sans-serif; */
+        font-weight: 500;
+        border-radius: 5px;
+        height:40px;
+        min-width: 200px;
+        text-transform: capitalize;
+        color: var(--grade-color-3);
+        cursor: pointer;
+    }
+    
+}

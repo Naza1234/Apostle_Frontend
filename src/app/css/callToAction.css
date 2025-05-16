@@ -1,0 +1,120 @@
+
+
+
+.call_to_action{
+    width: 98vw;
+    max-width: 1300px;
+    height: 450px;
+    border-radius:20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+
+.call_to_action .information{
+    width: 50%;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.call_to_action .information h1{
+    font-size:48px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color:var(--foreground);
+    max-width: 486px;
+}
+.call_to_action .information p{
+    font-size:20px;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: capitalize;
+    max-width: 412px;
+    color:var(--foreground);
+}
+.call_to_action .information a{
+    background-color: var(--foreground);
+    color: var(--primary-color);
+    font-size:16px;
+    font-weight: 600;
+    text-transform: capitalize;
+   width: 200px;
+   height: 55px;
+   border-radius: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.call_to_action img{
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@media screen and (max-width: 900px) {
+    .call_to_action img{
+        display: none;
+    }
+    
+.call_to_action{
+    width: 98vw;
+    max-width: 1300px;
+    height: fit-content;
+    border-radius:20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+.call_to_action .information{
+    width: 100%;
+    padding: 4vw;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+}
+
+.call_to_action .information h1{
+    font-size:calc(3.5vw + 20px);
+    font-weight: 500;
+    text-transform: capitalize;
+    color:var(--foreground);
+    max-width: 486px;
+    text-align: center;
+}
+.call_to_action .information p{
+    font-size:calc(1.5vw + 10px);
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: capitalize;
+    max-width: 412px;
+    color:var(--foreground);
+    text-align: center;
+}
+.call_to_action .information a{
+    background-color: var(--foreground);
+    color: var(--primary-color);
+    font-size:16px;
+    font-weight: 600;
+    text-transform: capitalize;
+   width: 200px;
+   height: 55px;
+   border-radius: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+}

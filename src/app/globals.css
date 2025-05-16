@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  :root {
+    --background: #fff;
+    --text-color:#13262f;
+    --foreground: #ededed;
+    --grade-color-3:#A3BAC3;
+    --fluting-background:rgb(163, 186, 195,.1);
+    --primary-color:#007090;
+    --container-padding:0px;
+    --box-shadow:0px 0px 30px 1px rgb(0, 112, 144,.05);
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    border: none;
+    list-style: none;
+    text-transform: capitalize;
+    text-decoration: none;
+  }
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+body{
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  overflow-x: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+::-webkit-scrollbar{
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 100px;
+  background-color: var(--grade-color-3);
+}
+::-webkit-scrollbar{}
+
+h2.error {
+  width: 100%;
+  max-width: 1300px;
+  padding: 20px; 
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 120%;
+  animation: vibrate 0.3s infinite;
+  /* display: none; */
+  border: 2px solid red;
+  min-height: 60px;
+  color: red;
+  background-color: rgb(255, 0, 0,.07);
+}
+
+h2.info{
+  width: 100%;
+  padding: 20px; 
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 120%;
+  animation: vibrate 0.3s infinite;
+  /* display: none; */
+  border: 2px solid var(--primary-color);
+  min-height: 60px;
+  max-height: fit-content;
+  color: var(--primary-color);
+  background-color: rgb(0, 112, 144, .2);
+}
+.content button.notActive,
+button.notActive{
+  background-color: var(--foreground);
+  background: var(--foreground);
+  cursor: pointer;
+  pointer-events: none;
+}

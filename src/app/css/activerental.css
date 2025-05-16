@@ -1,0 +1,109 @@
+
+
+
+
+.history{
+    width: 98%;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 50px 0px;
+}
+
+.history h1{
+    font-size:24px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 600;
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+}
+
+.history .info{
+    width: 100%;
+    height: 440px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.history .info ul{
+    height: 390px;
+    width:100%;
+    overflow-x: visible;
+    overflow-y: scroll;
+}
+.history .info li,
+.history .info div{
+    display: flex;
+    flex: row;
+    /* height: 40px; */
+    padding: 0px 0px;
+    min-width: 100%;
+    width: fit-content;
+    border-bottom: 2px solid var(--grade-color-3);
+}
+
+.history .info li span,
+.history .info div span{
+    max-width:180px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    min-height: 40px;
+    font-size:15px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 500;
+    min-width: 130px;
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+}
+
+.history .info li span:last-child,
+.history .info div span:last-child{
+    width: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    min-width: 50px;
+}
+
+
+.history .info li span:nth-child(2),
+.history .info div span:nth-child(2){
+   max-width: 80px;
+}
+
+.history .info li{
+    border: none;
+}
+
+.history .info li:nth-child(odd){
+    background-color: var(--foreground);
+}
+
+
+
+@media screen and (max-width : 1000) {
+    .history .info li span,
+    .history .info div span{
+    max-width:180px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    min-height: 40px;
+    font-size:15px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 500;
+    min-width: 130px;
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+}
+}

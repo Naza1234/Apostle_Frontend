@@ -1,0 +1,202 @@
+
+
+
+
+.history{
+    width: 98%;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 50px 0px;
+}
+
+.history h1{
+    font-size:24px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 600;
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+}
+
+.history .info{
+    width: 100%;
+    height: 440px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.history .info ul{
+    height: 390px;
+    width:100%;
+    overflow-x: visible;
+    overflow-y: scroll;
+}
+.history .info li,
+.history .info div{
+    display: flex;
+    flex: row;
+    /* height: 40px; */
+    padding: 0px 0px;
+    min-width: 100%;
+    width: fit-content;
+    border-bottom: 2px solid var(--grade-color-3);
+}
+
+.history .info li span,
+.history .info div span{
+    max-width:180px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    min-height: 40px;
+    font-size:15px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 500;
+    /* min-width: 130px; */
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+}
+
+.history .info li span:last-child,
+.history .info div span:last-child{
+    width: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    min-width: 50px;
+}
+
+.history .info li span:nth-child(7),
+.history .info div span:nth-child(7){
+   min-width: 160px;
+}
+
+.history .info li span:nth-child(2),
+.history .info div span:nth-child(2){
+   max-width: 80px;
+}
+
+.history .info li{
+    border: none;
+}
+
+.history .info li:nth-child(odd){
+    background-color: var(--foreground);
+}
+
+.popup{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: fit-content;
+    min-height: 100%;
+    background-color: var(--fluting-background);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 0;
+    transition: .2s ease-in-out;
+   }
+   
+   .popup.active{
+       scale: 1;
+   }
+   .content{
+       width: 98%;
+       max-width: 1000px;
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+       margin: 50px 0px;
+       box-shadow: var(--box-shadow);
+       border-radius: 10px;
+       padding: 20px;
+       background-color: #fff;
+   }
+   .content h1{
+       font-size:24px;
+       /* font-family: "Kodchasan",sans-serif; */
+       font-weight: 600;
+       /* color: var(--primary-color); */
+       color: var(--text-color);
+       display: flex;
+       justify-content: space-between;
+   
+   }
+   .content label{
+    display: flex;
+    flex-direction: column;
+    /* border-bottom: 1.5px solid var(--grade-color-3); */
+    padding: 10px 0px;
+    font-size:12px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 600;
+    color: var(--grade-color-3);
+    /* color: var(--primary-color); */
+    /* color:#fff; */
+    width: 100%;
+    gap: 10px;
+}
+.content label textarea,
+.content label select,
+.content label input{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding: 5px;
+    font-size:18px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    /* color: var(--primary-color); */
+    color:var(--text-color);
+    background-color: var(--foreground);
+    border-radius: 5px;
+}
+.content label textarea{
+    min-height: 120px;
+}
+   .content button{
+    font-size:16px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 600;
+    /* color: var(--primary-color); */
+    color:#fff;
+    /* width: 220px; */
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+@media screen and (max-width : 1000) {
+    .history .info li span,
+    .history .info div span{
+    max-width:180px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    min-height: 40px;
+    font-size:15px;
+    /* font-family: "Kodchasan",sans-serif; */
+    font-weight: 500;
+    min-width: 130px;
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+}
+}
