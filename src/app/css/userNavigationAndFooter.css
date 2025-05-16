@@ -190,6 +190,9 @@ footer div ul{
     text-transform: capitalize;
     cursor: pointer;
    }
+   footer a {
+    color: #fff;
+   }
 
    footer hr{
     width:100%;
@@ -230,6 +233,11 @@ footer div ul{
         min-width: 240px;
         text-transform: capitalize;
         color: var(--grade-color-3);
+    }
+    nav ul li:nth-child(1){
+        padding: 0px;
+        width: 40px;
+        min-width: 0px;
     }
     nav .user_info .row button p{
         display: none;

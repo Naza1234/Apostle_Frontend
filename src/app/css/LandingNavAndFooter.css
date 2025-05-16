@@ -348,6 +348,9 @@ label.icon {
     text-transform: capitalize;
     cursor: pointer;
    }
+   footer a {
+    color: #fff;
+   }
 
    footer .other_info hr{
     width:100%;

@@ -33,7 +33,6 @@ const Navigation = ({ setEditProfile }) => {
       const userId = localStorage.getItem("ApostlesRentalWebsiteForPowerBanksUserId");
       if (!userId) {
         router.push("/");
-        return;
       }
       const result = await FetchUserData();
       if (result.status) {
