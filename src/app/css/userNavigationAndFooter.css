@@ -94,6 +94,7 @@ nav .user_info div.row button:nth-child(2){
     width: fit-content;
 }
 nav ul{
+    position: relative;
     display: flex;
     width: 100%;
     gap: 20px;
@@ -216,6 +217,9 @@ footer div ul{
         align-items: flex-start;
         width: 100%;
         gap: 20px;
+    }
+    nav ul{
+        position: relative;
     }
     nav ul li{
         width: fit-content;

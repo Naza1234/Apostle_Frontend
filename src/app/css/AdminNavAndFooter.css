@@ -209,6 +209,9 @@ footer div ul{
         width: 100%;
         gap: 20px;
     }
+    nav ul{
+        position: relative;
+    }
     nav ul li{
         width: fit-content;
         padding: 0px 30px;
