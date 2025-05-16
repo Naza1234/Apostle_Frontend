@@ -6,9 +6,7 @@ import { ApiUrl , WinUrl } from "./ApiUrl";
 const FetchAdminData = async () => {
   try {
     // Ensure we're on the Admin dashboard page
-    if (!window.location.href.startsWith(`${WinUrl}/Admin`)) {
-      return { status: false, message: "You are not on the Admin dashboard page." };
-    }
+  
 
     // Retrieve user ID from localStorage
     const userId = localStorage.getItem("ApostlesRentalWebsiteForPowerBanksUserId");

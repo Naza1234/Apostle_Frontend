@@ -111,8 +111,7 @@ nav ul li{
 
 nav ul li:nth-child(1){
     padding: 0px;
-    width: 40px;
-    min-width: 0px;
+    min-width: 40px;
 }
 nav ul li a:nth-child(1){
     padding: 0px ;
@@ -228,8 +227,7 @@ footer div ul{
     }
     nav ul li:nth-child(1){
         padding: 0px;
-        width: 40px;
-        min-width: 0px;
+        min-width: 40px;
     }
     footer section div{
         display: flex;

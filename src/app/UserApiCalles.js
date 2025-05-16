@@ -4,15 +4,15 @@ import { ApiUrl , WinUrl } from "./ApiUrl";
 
 
 const FetchUserData = async () => {
+  console.log("nouserId2",localStorage.getItem("ApostlesRentalWebsiteForPowerBanksUserId"));
   try {
     // Check current URL
-    if (!window.location.href.startsWith(WinUrl + "/Dashboard")) {
-      return { status: false, message: "Not on Dashboard page" };
-    }
+
     
     // Get userId from localStorage
     const userId = localStorage.getItem("ApostlesRentalWebsiteForPowerBanksUserId");
     if (!userId) {
+      console.log("nouserId");
       return { status: false, message: "User ID not found in localStorage" };
     }
 

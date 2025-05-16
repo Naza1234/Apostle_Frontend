@@ -34,6 +34,7 @@ const Navigation = ({ setEditProfile }) => {
       if (!userId) {
         router.push("/");
       }
+      console.log("going");
       const result = await FetchUserData();
       if (result.status) {
         setApiResponse(result.data.user);
