@@ -45,10 +45,16 @@ const Navigation = () => {
           </ul>
         </div>
         <div>
+          {userId ? (  
+          <a href={userId ? "/Dashboard" : "/LogIn"} className="button">
+            <img src="../assets/images/key.svg" alt="" />
+            <strong>rent now</strong>
+          </a>) : ( 
           <Link href={userId ? "/Dashboard" : "/LogIn"} className="button">
             <img src="../assets/images/key.svg" alt="" />
             <strong>rent now</strong>
-          </Link>
+          </Link>)}
+         
           <label
             htmlFor="menu"
             className={`icon ${isMenuActive ? 'active' : ''}`}

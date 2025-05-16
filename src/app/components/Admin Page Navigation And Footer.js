@@ -47,7 +47,7 @@ const Navigation = () => {
           type="button"
           onClick={() => {
             localStorage.removeItem("ApostlesRentalWebsiteForPowerBanksUserId");
-            router.push("/"); // ✅ use router.push instead of window.location.href
+            window.location.hrf=`${WinUrl}`// ✅ use router.push instead of window.location.href
           }}
         >
           <p>logout</p>
