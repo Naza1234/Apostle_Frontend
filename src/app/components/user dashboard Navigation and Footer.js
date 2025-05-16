@@ -76,7 +76,7 @@ const Navigation = ({ setEditProfile }) => {
             </button>
             <button type="button" onClick={() => {
               localStorage.removeItem("ApostlesRentalWebsiteForPowerBanksUserId");
-              window.location.hrf=`${WinUrl}` // ✅ use router.push instead of window.location.href
+              window.location.href=`${WinUrl}` // ✅ use router.push instead of window.location.href
             }}>
               <p>logout</p>
               <img src="/assets/images/logout.svg" alt="logout" />

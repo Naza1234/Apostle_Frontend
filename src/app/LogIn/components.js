@@ -101,7 +101,7 @@ const LogInForm = () => {
         localStorage.setItem("ApostlesRentalWebsiteForPowerBanksUserId", response.data.response.UserId);
         setFetchRequestResponse({ status: true, response: response.data.message });
         
-        window.location.hrf=`${WinUrl}/Dashboard`
+        window.location.href=`${WinUrl}/Dashboard`
       } else {
         setFetchRequestResponse({ status: false, response: response.data.message });
         setTimeout(() => setFetchRequestIsDone(true), 3000);
