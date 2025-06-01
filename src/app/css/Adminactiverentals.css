@@ -32,9 +32,10 @@
 
 .history .info ul{
     height: 390px;
-    width:100%;
+    /* width:; */
+    min-width: 1350px;
     overflow-x: visible;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .history .info li,
 .history .info div{
@@ -43,6 +44,7 @@
     /* height: 40px; */
     padding: 0px 0px;
     min-width: 100%;
+    flex-direction: row;
     width: fit-content;
     border-bottom: 2px solid var(--grade-color-3);
 }

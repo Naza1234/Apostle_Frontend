@@ -406,7 +406,32 @@ const EditReserveTime = async (payload = {}) => {
   };
 
 
-
+  const AddUsers = async (formData) => {
+    try {
+      const response = await axios.post(
+        `${ApiUrl}/adminporttal/verify-user`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+  
+      return response.data;
+    } catch (error) {
+      console.error("Error uploading:", error);
+  
+      // Check if the server responded
+      if (error.response && error.response.data) {
+        return error.response.data; // <-- return the actual error data from the server
+      } else {
+        // Fallback if there's no response (e.g., network error)
+        return { status: false, message: error.message };
+      }
+    }
+  };
+  
 
 
   export {
@@ -419,6 +444,6 @@ const EditReserveTime = async (payload = {}) => {
     GetUserQuickRentalHistoryForToday , FetchUserData ,UpdateUserData ,
     GetAccountRentalDetails , RentOutPowerBank , GetAccountRentalDetailsForReserve ,
     RentOutPowerBankForReserve , ReturnPowerBank , FetchAdminData ,
-    SendMessageHandler 
+    SendMessageHandler, AddUsers 
 
   }

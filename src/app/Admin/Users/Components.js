@@ -1,9 +1,10 @@
 "use client";
 
-import { FetchUserData, GetUsers, GetUsersName, UpdateUserData, UpdateUserSchoolProfile } from "@/app/Adminapicalls";
+import { AddUsers, FetchUserData, GetUsers, GetUsersName, UpdateUserData, UpdateUserSchoolProfile } from "@/app/Adminapicalls";
 import "../../css/users.css"
 import { useEffect, useState, useRef } from "react";
 import { ExportInput } from "@/app/components/Inputs";
+import { WinUrl } from "@/app/ApiUrl";
 
 
 const PopupForSendMessage = ({ PopupForSendMessageActive, PopupForSendMessageSetActive, Data }) => {
@@ -459,9 +460,141 @@ const PopupForUploadProfile = ({ PopupForUploadProfileActive, PopupForUploadProf
 };
 
 
+const PopupForAddUser = ({ PopupForAddUserActive, PopupForAddUserSetActive }) => {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [redirectUrl, setRedirectUrl] = useState(`${WinUrl}/LogIn`);
+  const [loading, setLoading] = useState(false);
+  const [response, setResponse] = useState(null);
+
+  const handleClick = (element) => {
+    element((prev) => !prev);
+    setSelectedFile(null)
+    setResponse(null)
+    setLoading(false)
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file && file.type === "application/pdf") {
+      setSelectedFile(file);
+    } else {
+      alert("Please upload a valid PDF file.");
+    }
+  };
+
+ 
+
+  const handleSubmit = async () => {
+    if (!selectedFile || !redirectUrl) {
+      alert("Please upload a PDF file and enter a redirect URL.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("file", selectedFile);
+    formData.append("redirectUrl", redirectUrl);
+
+    setLoading(true);
+    try {
+       const request = await AddUsers(formData);
+      console.log(request);
+      setResponse(request)
+      // handleClick(PopupForAddUserActive);
+    } catch (error) {
+      console.error("Upload failed:", error);
+      setResponse(error)
+      // alert("Failed to upload. Please try again.");
+    }
+    setLoading(false);
+  };
+
+  return (
+    <section className={PopupForAddUserSetActive ? "popup active" : "popup"}>
+      <section className="content">
+        <h1>
+          Add New User
+          <img
+            src="../assets/images/close-square.svg"
+            alt="close"
+            onClick={() => handleClick(PopupForAddUserActive)}
+          />
+        </h1>
+        <br />
+
+        {loading && <p>Adding user...</p>}
+        {
+  response === null ? (
+    <>
+      <div className="file_upload">
+        {selectedFile ? (
+          <iframe
+            src={URL.createObjectURL(selectedFile)}
+            title="PDF Preview"
+            width="150px"
+            height="150px"
+          ></iframe>
+        ) : (
+          <div
+            style={{
+              width: "150px",
+              height: "150px",
+              background: "#ccc",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span>No PDF selected</span>
+          </div>
+        )}
+
+        <label htmlFor="pdf1">
+          <input
+            type="file"
+            id="pdf1"
+            name="pdf1"
+            accept="application/pdf"
+            style={{ display: "none" }}
+            onChange={handleFileChange}
+          />
+          <button type="button" onClick={() => document.getElementById("pdf1").click()}>
+            Upload PDF
+          </button>
+        </label>
+      </div>
+
+      <br />
+      <button onClick={handleSubmit} className={loading ? "notActive" : ""}>
+        {loading ? "Submitting..." : "Send"}
+      </button>
+    </>
+  ) : (
+    <>
+      {Object.entries(response).map(([key, value], index) => (
+        <label key={`${index}-${key}`}>
+          {key}
+          <input 
+            type="text" 
+            readOnly 
+            value={value}
+          />
+        </label>
+      ))}
+    </>
+  )
+}
+
+      </section>
+    </section>
+  );
+};
+
+
+
 const Components = () => {
   const [SendMessageActive, setSendMessageActive] = useState(false);
   const [uploadProfileActive, setUploadProfileActive] = useState(false);
+  const [AddUserActive, setAddUserActive] = useState(false);
   const [apiResponse, setApiResponse] = useState([]);
   const [apiResponseIsReserved, setApiResponseIsReserved] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -537,8 +670,14 @@ const Components = () => {
             PopupForUploadProfileSetActive = {uploadProfileActive}
 
          />
+
+         <PopupForAddUser
+            PopupForAddUserActive = {setAddUserActive}
+            PopupForAddUserSetActive = {AddUserActive}
+
+         />
             <h1>
-            rental history
+            users({filteredUsers.length})
             </h1>
             <section className="other">
             <input
@@ -552,7 +691,10 @@ const Components = () => {
             />
 
 
-              <button onClick={() => handleClick( setUploadProfileActive)}>upload profile</button>
+              <div className="row">
+                <button onClick={() => handleClick( setUploadProfileActive)}>upload profile</button>
+                <button onClick={() => handleClick(setAddUserActive)}> <img src="../assets/images/add.svg" alt="Add" /></button>
+              </div>
             </section>
             {apiResponse.length === 0 && !loading &&
 

@@ -64,9 +64,10 @@
 
 .history .info ul{
     height: 390px;
-    width:100%;
+    /* width:; */
+    min-width: 1350px;
     overflow-x: visible;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .history .info li,
 .history .info div{
@@ -75,6 +76,7 @@
     /* height: 40px; */
     padding: 0px 0px;
     min-width: 100%;
+    flex-direction: row;
     width: fit-content;
     border-bottom: 2px solid var(--grade-color-3);
 }
@@ -84,10 +86,11 @@
     max-width:180px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding: 5px 10px;
     min-height: 40px;
+    overflow: hidden;
     font-size:15px;
     /* font-family: "Kodchasan",sans-serif; */
     font-weight: 500;
@@ -188,6 +191,7 @@
     background-color: var(--foreground);
     border-radius: 5px;
 }
+
 .file_upload{
     width: 100%;
     border-radius: 10px;
@@ -239,6 +243,12 @@
     align-items: center;
     background-color: var(--primary-color);
 }
+.history .other .row{
+    display: flex;
+    align-self: flex-end;
+    display: flex;
+    gap: 10px;
+}
 
 @media screen and (max-width : 1000) {
     .history .info li span,
@@ -256,5 +266,25 @@
     min-width: 130px;
     /* color: var(--primary-color); */
     color: var(--text-color);
+}
+.history .other{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+.history .other input{
+    width: 100%;
+    max-width: none;
+}
+.history .other .row{
+    display: flex;
+    align-self: flex-end;
+    display: flex;
+    gap: 10px;
+}
+.history .other .row button:last-child{
+   padding: 0px;
+   width: 40px;
 }
 }
