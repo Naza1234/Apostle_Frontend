@@ -422,20 +422,9 @@ const handleSubmit = async (e) => {
   const ViewPin = ({ setViewPinActive }) => {
     const [pin, setPin] = useState("");
     const [showPin, setShowPin] = useState(false);
+    const [loading, setLoading] = useState(false);
   
-    useEffect(() => {
-      const loadUser = async () => {
-        const result = await FetchUserData();
-        if (result.status) {
-          console.log("User data:", result.data);
-          setPin(result.data.user.UserPin || "");
-        } else {
-          console.warn("Fetch error:", result.message);
-        }
-      };
-  
-      loadUser();
-    }, []);
+   
   
     const toggleShowPin = () => {
       setShowPin((prev) => !prev);
@@ -457,15 +446,32 @@ const handleSubmit = async (e) => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       console.log("Submitted PIN:", pin);
-      const response = await UpdateUserPin({"UserPin": pin });
-  
-      if (response) {
-        console.log(response);
-        toggleActive(); // Only run if update is successful
-      } else {
-        alert("Failed to update PIN. Please try again.");
+      setLoading(true);
+    
+      try {
+        const response = await UpdateUserPin({ UserPin: pin });
+    
+        // Assume the response has .message or .data to show
+        alert(response?.message || response?.data || "Update completed.");
+        
+        // You can check for success flag if needed
+        if (response?.status === true || response?.success === true) {
+          toggleActive(); // Run only if successful
+        }
+      } catch (error) {
+        console.error("Error updating PIN:", error);
+    
+        // Try to show server's error message
+        if (error.response?.data?.message) {
+          alert(error.response.data.message);
+        } else {
+          alert(error.message || "An error occurred while updating the PIN.");
+        }
       }
+    
+      setLoading(false);
     };
+    
   
     const toggleActive = () => {
       setViewPinActive((prev) => !prev);
@@ -480,12 +486,13 @@ const handleSubmit = async (e) => {
             onClick={toggleActive}
             style={{ cursor: "pointer" }}
           />
-          Rental PIN
+          Rental PIN <br/>
+          set a transaction pin.
         </h1>
   
         <label>
           <input
-            type={showPin ? "text" : "password"}
+            type={showPin ? "number" : "password"}
             value={pin}
             onChange={handleChange}
             maxLength={4}
@@ -510,7 +517,7 @@ const handleSubmit = async (e) => {
           </div>
         </label>
   
-        <button type="submit">Edit</button>
+        <button type="submit" className={loading?"notActive":""}>Edit</button>
       </form>
     );
   };

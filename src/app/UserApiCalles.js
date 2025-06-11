@@ -35,24 +35,42 @@ const FetchUserData = async () => {
 
 
 const UpdateUserPin = async (updateDataArray) => {
-    try {
-      const userId = localStorage.getItem("ApostlesRentalWebsiteForPowerBanksUserId");
-  
-      if (!userId) {
-        throw new Error("User ID not found in local storage.");
-      }
-  
-      const response = await axios.put(
-        `${ApiUrl}/user/update-pin/${userId}`,
-        updateDataArray
-      );
-  
-      return response.data;
-    } catch (error) {
-      console.error("Error updating user pin:", error);
-      return { status: false, message: error.message };
+  try {
+    const userId = localStorage.getItem("ApostlesRentalWebsiteForPowerBanksUserId");
+
+    if (!userId) {
+      throw new Error("User ID not found in local storage.");
     }
-  };
+
+    const response = await axios.put(
+      `${ApiUrl}/user/update-pin/${userId}`,
+      updateDataArray
+    );
+
+    return response.data; // assuming backend returns { status, message, ... }
+  } catch (error) {
+    console.error("Error updating user pin:", error);
+
+    // If it's a response error (e.g. 400, 500)
+    if (error.response) {
+      return {
+        status: false,
+        code: error.response.status,
+        message: error.response.data?.message || "An error occurred on the server.",
+        data: error.response.data || null,
+      };
+    }
+
+    // Other kinds of errors (network, local)
+    return {
+      status: false,
+      message: error.message || "Unexpected error occurred.",
+      code: 0,
+      data: null,
+    };
+  }
+};
+
 
 
 
